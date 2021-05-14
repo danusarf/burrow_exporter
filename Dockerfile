@@ -1,7 +1,7 @@
 FROM golang:alpine as glide
 RUN apk update
 RUN apk add git
-RUN go get github.com/Masterminds/glide
+RUN go get github.com/danusarf/glide
 WORKDIR /go/src/github.com/jirwin/burrow_exporter
 COPY . /go/src/github.com/jirwin/burrow_exporter
 RUN glide install
